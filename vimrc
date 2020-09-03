@@ -12,7 +12,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Vimjas/vim-python-pep8-indent'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " General
