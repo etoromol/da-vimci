@@ -23,9 +23,13 @@ set colorcolumn=80
 set background=dark
 colorscheme gruvbox
 
-" File Browsing (Classic)
+" Navigation (Classic)
 nnoremap q b
 nnoremap p <S-p> 
+nnoremap <S-J> <C-W><C-J>
+nnoremap <S-K> <C-W><C-K>
+nnoremap <S-L> <C-W><C-L>
+nnoremap <S-H> <C-W><C-H>
 
 " Sidebar (NerdTree)
 nnoremap 1 :NERDTreeToggle<CR>
