@@ -1,37 +1,42 @@
-" ______________________ 
-"( Last update 02/09/20 )
-" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ 
+" Created by Eduardo Toro on 2019.
+"
+" Last update 10/07/21
+" ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 "        \   ^__^
 "         \  (@@)\_______
 "            (__)\       )\/\
 "                ||----w |
 "                ||     ||
 "
-" Vim Pluging Manager
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim'
 Plug 'preservim/nerdtree'
-Plug 'itchyny/lightline.vim'
-Plug 'Vimjas/vim-python-pep8-indent'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " General
+colorscheme gruvbox
 syntax enable
 set number
-set laststatus=2
 set colorcolumn=80
 set background=dark
-colorscheme gruvbox
 
-" Navigation (Classic)
-nnoremap q b
-nnoremap p <S-p> 
-nnoremap <S-J> <C-W><C-J>
-nnoremap <S-K> <C-W><C-K>
-nnoremap <S-L> <C-W><C-L>
-nnoremap <S-H> <C-W><C-H>
-
-" Sidebar (NerdTree)
+" NerdTree
 nnoremap 1 :NERDTreeToggle<CR>
 let NERDTreeMinimalUI=1
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
