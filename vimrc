@@ -31,6 +31,12 @@ syntax enable
 set number
 set colorcolumn=80
 
+" Disable arrow keys:
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
 " NerdTre config:
 nnoremap 1 :NERDTreeToggle<CR>
 let NERDTreeMinimalUI=1
