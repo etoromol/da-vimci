@@ -1,4 +1,4 @@
-" Copyright (c) 2019 Eduardo Toro
+" Copyright (c) 2022 Eduardo Toro
 " ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 "        \   ^__^
 "         \  (@@)\_______
@@ -6,7 +6,6 @@
 "                ||----w |
 "                ||     ||
 "
-" Vim-plug config:
 call plug#begin('~/.vim/plugged')
 
 " https://github.com/morhetz/gruvbox
@@ -30,12 +29,7 @@ call plug#end()
 syntax enable
 set number
 set colorcolumn=80
-
-" Disable arrow keys:
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+set relativenumber
 
 " NerdTre config:
 nnoremap 1 :NERDTreeToggle<CR>
